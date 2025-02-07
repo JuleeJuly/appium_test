@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-31T15:54:40.958376" rpa="false" schemaversion="5">
+<suite id="s1" name="Appium Test" source="C:\Users\Administrateur\Desktop\appium_test\appium_test">
+<suite id="s1-s1" name="Tests" source="C:\Users\Administrateur\Desktop\appium_test\appium_test\Tests">
+<suite id="s1-s1-s1" name="Apidemos" source="C:\Users\Administrateur\Desktop\appium_test\appium_test\Tests\apidemos.robot">
+<test id="s1-s1-s1-t1" name="Scenario: Launch And Verify The Home Screen" line="8">
+<kw name="Given I Launch The APIDemos App" owner="apidemo_keywords">
+<kw name="Start Appium Session" owner="appium_keywords">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${APPIUM_SERVER_GUI}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>appPackage=${app_package}</arg>
+<arg>appActivity=${app_activity}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-01-31T15:54:41.212003" elapsed="21.557120"/>
+</kw>
+<arg>${APP_PACKAGE_API}</arg>
+<arg>${APP_ACTIVITY_API}</arg>
+<doc>Démarrer une session Appium en utilisant la configuration.</doc>
+<status status="PASS" start="2025-01-31T15:54:41.211558" elapsed="21.557743"/>
+</kw>
+<doc>Launch the application.</doc>
+<status status="PASS" start="2025-01-31T15:54:41.209772" elapsed="21.559626"/>
+</kw>
+<kw name="When The Logo Appears" owner="apidemo_keywords">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-01-31T15:55:04.140631" level="INFO">xpath criteria: //android.widget.TextView[@text="API Demos"]</msg>
+<arg>//android.widget.TextView[@text="API Demos"]</arg>
+<arg>timeout=5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-01-31T15:55:02.774462" elapsed="1.366401"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>text=API Demos</arg>
+<arg>timeout=5</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2025-01-31T15:55:04.141042" elapsed="0.084269"/>
+</kw>
+<doc>Verify the logo appears.</doc>
+<status status="PASS" start="2025-01-31T15:55:02.771696" elapsed="1.453800"/>
+</kw>
+<kw name="Then The Home Screen Should Be Visible" owner="apidemo_keywords">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-01-31T15:55:04.261988" level="INFO">criteria is android:id/list</msg>
+<arg>android:id/list</arg>
+<arg>timeout=5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-01-31T15:55:04.229159" elapsed="0.033163"/>
+</kw>
+<doc>Verify the home screen is visible.</doc>
+<status status="PASS" start="2025-01-31T15:55:04.227479" elapsed="0.035100"/>
+</kw>
+<doc>Test The App Launches Correctly And Verify The Home Screen Appears</doc>
+<status status="PASS" start="2025-01-31T15:54:41.208815" elapsed="23.055489"/>
+</test>
+<status status="PASS" start="2025-01-31T15:54:40.989690" elapsed="23.275616"/>
+</suite>
+<status status="PASS" start="2025-01-31T15:54:40.987565" elapsed="23.278790"/>
+</suite>
+<status status="PASS" start="2025-01-31T15:54:40.962541" elapsed="23.304724"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Appium Test" id="s1" pass="1" fail="0" skip="0">Appium Test</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">Appium Test.Tests</stat>
+<stat name="Apidemos" id="s1-s1-s1" pass="1" fail="0" skip="0">Appium Test.Tests.Apidemos</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
